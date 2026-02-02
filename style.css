@@ -500,6 +500,16 @@
             color: var(--color-text);
         }
 
+        .edu-link {
+            color: var(--color-text);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .edu-link:hover {
+            color: var(--color-accent);
+        }
+
         .edu-location {
             color: var(--color-accent);
             font-size: 0.9rem;
@@ -584,6 +594,24 @@
         }
 
         /* Projects */
+        .project-category {
+            margin-bottom: var(--spacing-xl);
+        }
+
+        .project-category:last-child {
+            margin-bottom: 0;
+        }
+
+        .category-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--color-accent);
+            margin-bottom: var(--spacing-lg);
+            padding-bottom: var(--spacing-sm);
+            border-bottom: 2px solid rgba(255, 77, 143, 0.2);
+        }
+
         .projects-grid {
             display: grid;
             gap: var(--spacing-lg);
