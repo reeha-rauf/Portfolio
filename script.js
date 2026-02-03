@@ -14,6 +14,38 @@
             localStorage.setItem('theme', newTheme);
         });
 
+        // Cursor glow effect
+        let mouseX = 0;
+        let mouseY = 0;
+        let cursorX = 0;
+        let cursorY = 0;
+
+        document.addEventListener('mousemove', (e) => {
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+            document.body.classList.add('mouse-active');
+        });
+
+        document.addEventListener('mouseleave', () => {
+            document.body.classList.remove('mouse-active');
+        });
+
+        function animateCursor() {
+            // Smooth interpolation for cursor position
+            cursorX += (mouseX - cursorX) * 0.15;
+            cursorY += (mouseY - cursorY) * 0.15;
+            
+            // Update the pseudo-element position using transform
+            const glow = document.body;
+            glow.style.setProperty('--glow-x', `${cursorX}px`);
+            glow.style.setProperty('--glow-y', `${cursorY}px`);
+            
+            requestAnimationFrame(animateCursor);
+        }
+
+        // Start the animation loop
+        animateCursor();
+
         // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {

@@ -33,6 +33,34 @@
             font-family: 'Work Sans', sans-serif;
             line-height: 1.6;
             overflow-x: hidden;
+            position: relative;
+            --glow-x: 50%;
+            --glow-y: 50%;
+        }
+
+        /* Cursor glow effect */
+        body::after {
+            content: '';
+            position: fixed;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(255, 77, 143, 0.15), transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 9999;
+            left: var(--glow-x);
+            top: var(--glow-y);
+            transform: translate(-50%, -50%);
+            transition: opacity 0.3s ease;
+            opacity: 0;
+        }
+
+        body.mouse-active::after {
+            opacity: 1;
+        }
+
+        [data-theme="light"] body::after {
+            background: radial-gradient(circle, rgba(255, 77, 143, 0.08), transparent 70%);
         }
 
         /* Animated grain texture */
