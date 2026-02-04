@@ -16,6 +16,7 @@
                 <li><a href="#about">About</a></li>
                 <li><a href="#education">Education</a></li>
                 <li><a href="#skills">Skills</a></li>
+                <li><a href="#hobbies">Hobbies</a></li>
                 <li><a href="#certifications">Certifications</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
@@ -75,7 +76,7 @@
                     </p>
                 </div>
                 <div class="about-image">
-                    <img src="profile.jpg" alt="Portrait of Reeha Rauf">
+                    <img src="images/profile.jpg" alt="Reeha Rauf" style="width: 100%; height: 100%; object-fit: cover;">
                 </div>
             </div>
         </div>
@@ -174,10 +175,44 @@
         </div>
     </section>
 
-    <section id="certifications">
+    <section id="hobbies">
         <div class="container">
             <div class="section-header fade-in">
                 <div class="section-number">04</div>
+                <h2 class="section-title">Hobbies & Interests</h2>
+                <p class="section-description">
+                    Beyond coding and technology, here's what I love to do in my free time.
+                </p>
+            </div>
+            <div class="hobbies-grid">
+                <div class="hobby-card fade-in">
+                    <div class="hobby-icon">📚</div>
+                    <h3>Reading & Writing</h3>
+                    <p>Love reading mystery thrillers and writing my own stories. Currently working on my novel "Blood or Paint".</p>
+                </div>
+                <div class="hobby-card fade-in">
+                    <div class="hobby-icon">🎮</div>
+                    <h3>Gaming</h3>
+                    <p>Enjoy playing strategy games and RPGs. Interested in game development and interactive storytelling.</p>
+                </div>
+                <div class="hobby-card fade-in">
+                    <div class="hobby-icon">🎨</div>
+                    <h3>Digital Art</h3>
+                    <p>Creating digital illustrations and exploring UI/UX design in my spare time.</p>
+                </div>
+                <div class="hobby-card fade-in">
+                    <div class="hobby-icon">🌍</div>
+                    <h3>Travel & Culture</h3>
+                    <p>Passionate about exploring new places, trying different cuisines, and learning about diverse cultures.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="certifications">
+        <div class="container">
+            <div class="section-header fade-in">
+                <div class="section-number">05</div>
                 <h2 class="section-title">Certifications</h2>
                 <p class="section-description">
                     Professional certifications demonstrating expertise in cloud computing and cybersecurity.
@@ -185,21 +220,27 @@
             </div>
             <div class="certifications-grid">
                 <div class="cert-card fade-in">
-                    <div class="cert-icon">☁️</div>
+                    <div class="cert-icon">
+                        <img src="images/aws-cert.png" alt="AWS Certification" style="width: 80px; height: 80px; object-fit: contain;">
+                    </div>
                     <h3>AWS Cloud Practitioner</h3>
                     <p class="cert-id">CLF-C02</p>
                     <p class="cert-date">Issued October 2025</p>
                     <a href="https://www.credly.com/badges/11d55344-c45f-429c-b92d-09869a5111c0/public_url" target="_blank" class="cert-link">View Credential →</a>
                 </div>
                 <div class="cert-card fade-in">
-                    <div class="cert-icon">🔒</div>
+                    <div class="cert-icon">
+                        <img src="images/security-plus-cert.png" alt="Security+ Certification" style="width: 80px; height: 80px; object-fit: contain;">
+                    </div>
                     <h3>CompTIA Security+</h3>
                     <p class="cert-id">SY0-701</p>
                     <p class="cert-date">Issued June 2025</p>
                     <a href="https://www.credly.com/badges/268fbf10-c653-4f07-8ba6-eac4293cb901/public_url" target="_blank" class="cert-link">View Credential →</a>
                 </div>
                 <div class="cert-card fade-in">
-                    <div class="cert-icon">🛡️</div>
+                    <div class="cert-icon">
+                        <img src="images/isc2-cert.png" alt="ISC2 CC Certification" style="width: 80px; height: 80px; object-fit: contain;">
+                    </div>
                     <h3>ISC2 CC Certified</h3>
                     <p class="cert-id">Certified in Cybersecurity</p>
                     <p class="cert-date">Issued December 2025</p>
@@ -212,20 +253,31 @@
     <section id="projects">
         <div class="container">
             <div class="section-header fade-in">
-                <div class="section-number">05</div>
+                <div class="section-number">06</div>
                 <h2 class="section-title">Featured Projects</h2>
                 <p class="section-description">
                     A selection of my most impactful and innovative work across different domains.
                 </p>
             </div>
 
-            <!-- Internship Projects -->
-            <div class="project-category fade-in">
-                <h3 class="category-title">Internship Projects</h3>
+            <!-- Project Tabs -->
+            <div class="project-tabs fade-in">
+                <button class="tab-button active" data-tab="all">All Projects</button>
+                <button class="tab-button" data-tab="internship">Internship</button>
+                <button class="tab-button" data-tab="personal">Personal</button>
+                <button class="tab-button" data-tab="hackathons">Hackathons & School</button>
+                <button class="tab-button" data-tab="non-technical">Non-Technical</button>
+            </div>
+
+            <!-- All Projects Tab Content -->
+            <div class="tab-content active" data-content="all">
+                <!-- Internship Projects -->
+                <div class="project-category fade-in">
+                    <h3 class="category-title">Internship Projects</h3>
                 <div class="projects-grid">
                     <div class="project-card fade-in">
-                        <div class="project-image has-image">
-                            <img src="images/rag-system.jpg" alt="Production RAG system interface preview">
+                        <div class="project-image">
+                            <img src="images/rag-system.jpg" alt="Production RAG System" style="width: 100%; height: 100%; object-fit: cover;">
                         </div>
                         <div class="project-content">
                             <div class="project-number">Quadrant Technologies</div>
@@ -247,8 +299,8 @@
                     </div>
 
                     <div class="project-card fade-in">
-                        <div class="project-image has-image">
-                            <img src="images/llm-assistant.jpg" alt="Multi-agent LLM assistant dashboard preview">
+                        <div class="project-image">
+                            <img src="images/llm-assistant.jpg" alt="Multi-Agent LLM Assistant" style="width: 100%; height: 100%; object-fit: cover;">
                         </div>
                         <div class="project-content">
                             <div class="project-number">Quadrant Technologies</div>
@@ -276,8 +328,8 @@
                 <h3 class="category-title">Personal Projects</h3>
                 <div class="projects-grid">
                     <div class="project-card fade-in">
-                        <div class="project-image has-image">
-                            <img src="images/projectmelon.jpg" alt="ProjectMelon educational platform preview">
+                        <div class="project-image">
+                            <img src="images/projectmelon.jpg" alt="ProjectMelon" style="width: 100%; height: 100%; object-fit: cover;">
                         </div>
                         <div class="project-content">
                             <div class="project-number">Personal</div>
@@ -299,8 +351,8 @@
                     </div>
 
                     <div class="project-card fade-in">
-                        <div class="project-image has-image">
-                            <img src="images/oasisai.jpg" alt="OasisAI journaling web app preview">
+                        <div class="project-image">
+                            <img src="images/oasisai.jpg" alt="OasisAI" style="width: 100%; height: 100%; object-fit: cover;">
                         </div>
                         <div class="project-content">
                             <div class="project-number">Personal</div>
@@ -346,8 +398,8 @@
                 <h3 class="category-title">Hackathons & School Projects</h3>
                 <div class="projects-grid">
                     <div class="project-card fade-in">
-                        <div class="project-image has-image">
-                            <img src="images/cipher-extension.jpg" alt="CIpher Chrome extension preview">
+                        <div class="project-image">
+                            <img src="images/cipher-extension.jpg" alt="CIpher Chrome Extension" style="width: 100%; height: 100%; object-fit: cover;">
                         </div>
                         <div class="project-content">
                             <div class="project-number">Google Chrome AI Challenge</div>
@@ -369,8 +421,8 @@
                     </div>
 
                     <div class="project-card fade-in">
-                        <div class="project-image has-image">
-                            <img src="images/evergrove.jpg" alt="Evergrove data science game preview">
+                        <div class="project-image">
+                            <img src="images/evergrove.jpg" alt="Evergrove Game" style="width: 100%; height: 100%; object-fit: cover;">
                         </div>
                         <div class="project-content">
                             <div class="project-number">Senior Capstone</div>
@@ -437,6 +489,220 @@
                 </div>
             </div>
 
+            <!-- Internship Tab Content -->
+            <div class="tab-content" data-content="internship">
+                <div class="projects-grid">
+                    <div class="project-card fade-in">
+                        <div class="project-image">
+                            <img src="images/rag-system.jpg" alt="Production RAG System" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <div class="project-content">
+                            <div class="project-number">Quadrant Technologies</div>
+                            <h3>Production RAG System</h3>
+                            <p>
+                                Developed a production-grade Retrieval-Augmented Generation system processing 
+                                1,000+ legal documents using GPT-5.2 and text-embedding-3-large. Implemented 
+                                hybrid search achieving 85%+ relevance and optimized pipeline performance by 66%, 
+                                reducing processing time from 45s to 15s while cutting API costs by 40%.
+                            </p>
+                            <div class="project-tags">
+                                <span class="tag">Python</span>
+                                <span class="tag">Azure OpenAI</span>
+                                <span class="tag">GPT-5.2</span>
+                                <span class="tag">RAG</span>
+                            </div>
+                            <a href="https://github.com/reeha-rauf" class="project-link">View on GitHub →</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card fade-in">
+                        <div class="project-image">
+                            <img src="images/llm-assistant.jpg" alt="Multi-Agent LLM Assistant" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <div class="project-content">
+                            <div class="project-number">Quadrant Technologies</div>
+                            <h3>Multi-Agent LLM Assistant</h3>
+                            <p>
+                                Built an intelligent multi-agent system using Azure OpenAI (GPT-4o) with a 
+                                two-step verification pipeline to improve query accuracy across 400+ database 
+                                entries. Created a fuzzy search algorithm for typo-tolerant results and designed 
+                                prompt strategies that automatically detect and fix weak matches.
+                            </p>
+                            <div class="project-tags">
+                                <span class="tag">Azure OpenAI</span>
+                                <span class="tag">Python</span>
+                                <span class="tag">GPT-4o</span>
+                                <span class="tag">LLM</span>
+                            </div>
+                            <a href="https://github.com/reeha-rauf" class="project-link">View on GitHub →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Personal Tab Content -->
+            <div class="tab-content" data-content="personal">
+                <div class="projects-grid">
+                    <div class="project-card fade-in">
+                        <div class="project-image">
+                            <img src="images/projectmelon.jpg" alt="ProjectMelon" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <div class="project-content">
+                            <div class="project-number">Personal</div>
+                            <h3>ProjectMelon: AI Educational Platform</h3>
+                            <p>
+                                A comprehensive AI-powered educational platform for kids aged 3-14, featuring safe 
+                                AI chat, interactive storytelling, educational activities, and digital art studio. 
+                                Built with React, TypeScript, and Azure OpenAI with parental controls and content 
+                                filtering.
+                            </p>
+                            <div class="project-tags">
+                                <span class="tag">React</span>
+                                <span class="tag">TypeScript</span>
+                                <span class="tag">Azure OpenAI</span>
+                                <span class="tag">EdTech</span>
+                            </div>
+                            <a href="https://github.com/reeha-rauf/ProjectMelon" class="project-link">View on GitHub →</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card fade-in">
+                        <div class="project-image">
+                            <img src="images/oasisai.jpg" alt="OasisAI" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <div class="project-content">
+                            <div class="project-number">Personal</div>
+                            <h3>OasisAI</h3>
+                            <p>
+                                A web application that uses AI to create your personal oasis, providing a safe 
+                                space for journaling and self-reflection. Features intelligent prompts and 
+                                insights to help users process their thoughts and emotions in a supportive 
+                                environment.
+                            </p>
+                            <div class="project-tags">
+                                <span class="tag">AI</span>
+                                <span class="tag">Web App</span>
+                                <span class="tag">Mental Health</span>
+                            </div>
+                            <a href="https://oasis-ai-mock.vercel.app/" class="project-link">View Project →</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card fade-in">
+                        <div class="project-image"></div>
+                        <div class="project-content">
+                            <div class="project-number">Personal</div>
+                            <h3>CareerCraftAI</h3>
+                            <p>
+                                A web application that uses AI to provide resume feedback, career advice, and 
+                                cover letter generation. Built using AWS's PartyRock platform to deliver 
+                                personalized career guidance and professional development tools.
+                            </p>
+                            <div class="project-tags">
+                                <span class="tag">AWS PartyRock</span>
+                                <span class="tag">AI</span>
+                                <span class="tag">Career Development</span>
+                            </div>
+                            <a href="https://partyrock.aws/u/ReehaRauf/SlzAQbqYo/CareerCraft-AI" class="project-link">View Project →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hackathons & School Tab Content -->
+            <div class="tab-content" data-content="hackathons">
+                <div class="projects-grid">
+                    <div class="project-card fade-in">
+                        <div class="project-image">
+                            <img src="images/cipher-extension.jpg" alt="CIpher Chrome Extension" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <div class="project-content">
+                            <div class="project-number">Google Chrome AI Challenge</div>
+                            <h3>CIpher: Real-Time PII Protection</h3>
+                            <p>
+                                A Chrome extension that utilizes on-device AI (Gemini Nano) to automatically detect 
+                                and blur sensitive information in real-time. Protects your screen during browsing, 
+                                meetings, and screen-shares without sending data to the cloud. Developed for Google 
+                                Chrome Built-in AI challenge.
+                            </p>
+                            <div class="project-tags">
+                                <span class="tag">Chrome Extension</span>
+                                <span class="tag">On-Device AI</span>
+                                <span class="tag">Privacy</span>
+                                <span class="tag">JavaScript</span>
+                            </div>
+                            <a href="https://github.com/reeha-rauf/CIpher---Chrome-Extention" class="project-link">View on GitHub →</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card fade-in">
+                        <div class="project-image">
+                            <img src="images/evergrove.jpg" alt="Evergrove Game" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <div class="project-content">
+                            <div class="project-number">Senior Capstone</div>
+                            <h3>Evergrove: Data Science Game for Kids</h3>
+                            <p>
+                                Senior Capstone Project: An interactive game designed to teach kids the basics 
+                                of data science through engaging gameplay. Features intuitive mechanics that 
+                                introduce concepts like data collection, analysis, and visualization in a 
+                                fun, accessible way.
+                            </p>
+                            <div class="project-tags">
+                                <span class="tag">Game Development</span>
+                                <span class="tag">Education</span>
+                                <span class="tag">Data Science</span>
+                            </div>
+                            <a href="https://su-capstone.itch.io/evergrove" class="project-link">Play Game →</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card fade-in">
+                        <div class="project-image"></div>
+                        <div class="project-content">
+                            <div class="project-number">CTF Challenges</div>
+                            <h3>picoCTF Solutions</h3>
+                            <p>
+                                A comprehensive collection of solutions for picoCTF challenges, showcasing 
+                                problem-solving skills in cybersecurity. Documented approaches to various 
+                                security challenges including cryptography, forensics, reverse engineering, 
+                                and web exploitation.
+                            </p>
+                            <div class="project-tags">
+                                <span class="tag">Cybersecurity</span>
+                                <span class="tag">CTF</span>
+                                <span class="tag">Problem Solving</span>
+                            </div>
+                            <a href="https://github.com/reeha-rauf/picoCTF-solutions" class="project-link">View on GitHub →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Non-Technical Tab Content -->
+            <div class="tab-content" data-content="non-technical">
+                <div class="projects-grid">
+                    <div class="project-card fade-in">
+                        <div class="project-image"></div>
+                        <div class="project-content">
+                            <div class="project-number">Creative Writing</div>
+                            <h3>Blood or Paint: Can You Tell Them Apart?</h3>
+                            <p>
+                                A mystery-thriller novel that explores the story of an artist in pursuit of 
+                                finding her missing father. A creative writing project that showcases storytelling 
+                                and narrative development skills beyond technical work.
+                            </p>
+                            <div class="project-tags">
+                                <span class="tag">Creative Writing</span>
+                                <span class="tag">Mystery</span>
+                                <span class="tag">Thriller</span>
+                            </div>
+                            <a href="https://www.royalroad.com/fiction/120412/blood-or-paint-can-you-tell-them-apart" class="project-link">Read Book →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </section>
 
@@ -450,15 +716,19 @@
                     feel free to reach out!
                 </p>
                 <div class="contact-methods">
-                    <a href="/cdn-cgi/l/email-protection#88faededf1e9fae9fdeec8efe5e9e1e4a6ebe7e5" class="contact-method">
+                    <button class="contact-method" id="email-button">
                         <span>Email Me</span>
-                    </a>
+                    </button>
                     <a href="tel:+14255201592" class="contact-method">
                         <span>Call Me</span>
                     </a>
                     <a href="https://linkedin.com/in/reeha-rauf" target="_blank" class="contact-method">
                         <span>LinkedIn</span>
                     </a>
+                </div>
+                <div class="email-display" id="email-display">
+                    <p class="email-text">reeyarauf@gmail.com</p>
+                    <button class="copy-email-btn" id="copy-email-btn">Copy to Clipboard</button>
                 </div>
             </div>
         </div>
@@ -471,6 +741,7 @@
                 <a href="https://github.com/reeha-rauf" target="_blank">GitHub</a>
             </div>
             <p>&copy; 2026 Reeha Rauf. All rights reserved.</p>
+            <p class="last-updated">Last updated: <span id="last-updated-date"></span></p>
         </div>
     </footer>
     <script src="script.js"></script>

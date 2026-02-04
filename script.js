@@ -46,6 +46,58 @@
         // Start the animation loop
         animateCursor();
 
+        // Set last updated date
+        const lastUpdatedElement = document.getElementById('last-updated-date');
+        if (lastUpdatedElement) {
+            const today = new Date();
+            const options = { year: 'numeric', month: 'long', day: 'numeric' };
+            lastUpdatedElement.textContent = today.toLocaleDateString('en-US', options);
+        }
+
+        // Project tabs functionality
+        const tabButtons = document.querySelectorAll('.tab-button');
+        const tabContents = document.querySelectorAll('.tab-content');
+
+        tabButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const targetTab = button.getAttribute('data-tab');
+                
+                // Remove active class from all buttons and contents
+                tabButtons.forEach(btn => btn.classList.remove('active'));
+                tabContents.forEach(content => content.classList.remove('active'));
+                
+                // Add active class to clicked button and corresponding content
+                button.classList.add('active');
+                const targetContent = document.querySelector(`[data-content="${targetTab}"]`);
+                if (targetContent) {
+                    targetContent.classList.add('active');
+                }
+            });
+        });
+
+        // Email display functionality
+        const emailButton = document.getElementById('email-button');
+        const emailDisplay = document.getElementById('email-display');
+        const copyEmailBtn = document.getElementById('copy-email-btn');
+
+        if (emailButton && emailDisplay) {
+            emailButton.addEventListener('click', () => {
+                emailDisplay.classList.toggle('show');
+            });
+        }
+
+        if (copyEmailBtn) {
+            copyEmailBtn.addEventListener('click', () => {
+                const email = 'reeyarauf@gmail.com';
+                navigator.clipboard.writeText(email).then(() => {
+                    copyEmailBtn.textContent = 'Copied!';
+                    setTimeout(() => {
+                        copyEmailBtn.textContent = 'Copy to Clipboard';
+                    }, 2000);
+                });
+            });
+        }
+
         // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
