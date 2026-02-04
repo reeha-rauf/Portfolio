@@ -42,9 +42,9 @@
         body::after {
             content: '';
             position: fixed;
-            width: 1500px;
-            height: 1500px;
-            background: radial-gradient(circle, rgba(255, 77, 143, 0.75), transparent 70%);
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(255, 77, 143, 0.1), transparent 70%);
             border-radius: 50%;
             pointer-events: none;
             z-index: 9999;
