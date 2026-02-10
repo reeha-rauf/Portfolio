@@ -5,6 +5,8 @@
             --color-accent-2: #ff85b3;
             --color-muted: #666666;
             --color-surface: #1a1a1a;
+            --banner-height: 48px;
+            --nav-height: 72px;
             --spacing-xs: 0.5rem;
             --spacing-sm: 1rem;
             --spacing-md: 2rem;
@@ -36,6 +38,7 @@
             position: relative;
             --glow-x: 50%;
             --glow-y: 50%;
+            padding-top: calc(var(--banner-height) + var(--nav-height));
         }
 
         /* Cursor glow effect */
@@ -104,7 +107,7 @@
         /* Navigation */
         nav {
             position: fixed;
-            top: 0;
+            top: var(--banner-height);
             left: 0;
             right: 0;
             z-index: 100;
@@ -184,11 +187,14 @@
         /* Last Updated Banner */
         .last-updated-banner {
             background: linear-gradient(135deg, var(--color-accent), var(--color-accent-2));
-            padding: 0.75rem 0;
+            height: var(--banner-height);
+            padding: 0.5rem 0;
             text-align: center;
-            position: sticky;
+            position: fixed;
             top: 0;
-            z-index: 99;
+            left: 0;
+            right: 0;
+            z-index: 101;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
 
