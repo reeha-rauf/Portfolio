@@ -42,9 +42,9 @@
         body::after {
             content: '';
             position: fixed;
-            width: 500px;
-            height: 500px;
-            background: radial-gradient(circle, rgba(255, 77, 143, 0.1), transparent 70%);
+            width: 1500px;
+            height: 1500px;
+            background: radial-gradient(circle, rgba(255, 77, 143, 0.5), transparent 70%);
             border-radius: 50%;
             pointer-events: none;
             z-index: 9999;
@@ -179,6 +179,29 @@
 
         nav a:hover::after {
             width: 100%;
+        }
+
+        /* Last Updated Banner */
+        .last-updated-banner {
+            background: linear-gradient(135deg, var(--color-accent), var(--color-accent-2));
+            padding: 0.75rem 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 99;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .last-updated-banner p {
+            margin: 0;
+            color: white;
+            font-weight: 600;
+            font-size: 0.9rem;
+            letter-spacing: 0.05em;
+        }
+
+        .last-updated-banner span {
+            font-weight: 700;
         }
 
         .theme-toggle {
@@ -614,6 +637,19 @@
         .hobby-card p {
             color: var(--color-muted);
             line-height: 1.7;
+        }
+
+        .duolingo-link {
+            color: var(--color-accent);
+            text-decoration: none;
+            font-weight: 600;
+            border-bottom: 2px solid var(--color-accent);
+            transition: all 0.3s ease;
+        }
+
+        .duolingo-link:hover {
+            color: var(--color-accent-2);
+            border-bottom-color: var(--color-accent-2);
         }
 
         .skill-card {
@@ -1055,12 +1091,6 @@
 
         [data-theme="light"] footer {
             border-top: 1px solid rgba(0, 0, 0, 0.08);
-        }
-
-        .last-updated {
-            font-size: 0.85rem;
-            margin-top: var(--spacing-xs);
-            opacity: 0.7;
         }
 
         .social-links {

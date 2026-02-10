@@ -47,7 +47,7 @@
         animateCursor();
 
         // Set last updated date
-        const lastUpdatedElement = document.getElementById('last-updated-date');
+        const lastUpdatedElement = document.getElementById('last-updated-date-top');
         if (lastUpdatedElement) {
             const today = new Date();
             const options = { year: 'numeric', month: 'long', day: 'numeric' };
