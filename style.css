@@ -900,8 +900,8 @@
         }
         
         .cert-card {
-            flex: 0 0 calc(25% - 12px);
-            min-width: 250px;
+            flex: 0 0 280px;
+            min-width: 280px;
             background: var(--color-surface);
             padding: var(--spacing-lg);
             border: 1px solid rgba(255, 255, 255, 0.05);
