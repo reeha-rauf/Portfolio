@@ -46,14 +46,6 @@
         // Start the animation loop
         animateCursor();
 
-        // Set last updated date
-        const lastUpdatedElement = document.getElementById('last-updated-date-top');
-        if (lastUpdatedElement) {
-            const today = new Date();
-            const options = { year: 'numeric', month: 'long', day: 'numeric' };
-            lastUpdatedElement.textContent = today.toLocaleDateString('en-US', options);
-        }
-
         // Project tabs functionality
         const tabButtons = document.querySelectorAll('.tab-button');
         const tabContents = document.querySelectorAll('.tab-content');
@@ -135,6 +127,58 @@
         skillCards.forEach((card, index) => {
             card.style.animationDelay = `${index * 0.1}s`;
         });
+
+        // Certifications Carousel
+        const certPrevBtn = document.getElementById('cert-prev');
+        const certNextBtn = document.getElementById('cert-next');
+        const certificationsGrid = document.querySelector('.certifications-grid');
+        const certCards = document.querySelectorAll('.cert-card');
+        const certCarousel = document.querySelector('.certifications-carousel');
+        
+        let currentScroll = 0;
+        const cardWidth = 300; // approximate card width with gap
+        const gap = 16; // var(--spacing-md) is typically 16px
+        const itemWidth = cardWidth + gap;
+        let maxScroll = 0;
+
+        function updateCarouselState() {
+            const carouselWidth = certCarousel.clientWidth;
+            // Calculate how many items fit on screen
+            const itemsPerScreen = Math.floor(carouselWidth / itemWidth);
+            const totalItems = certCards.length;
+            
+            // Calculate max scroll based on screen size
+            if (itemsPerScreen >= totalItems) {
+                maxScroll = 0; // All items fit, no scrolling needed
+                certPrevBtn.disabled = true;
+                certNextBtn.disabled = true;
+            } else {
+                maxScroll = (totalItems - itemsPerScreen) * itemWidth;
+                certPrevBtn.disabled = currentScroll === 0;
+                certNextBtn.disabled = currentScroll >= maxScroll;
+            }
+            
+            // Update button opacity
+            certPrevBtn.style.opacity = certPrevBtn.disabled ? '0.5' : '1';
+            certNextBtn.style.opacity = certNextBtn.disabled ? '0.5' : '1';
+        }
+
+        function scrollCarousel(direction) {
+            if (direction === 'next') {
+                currentScroll = Math.min(currentScroll + itemWidth, maxScroll);
+            } else {
+                currentScroll = Math.max(currentScroll - itemWidth, 0);
+            }
+            certificationsGrid.style.transform = `translateX(-${currentScroll}px)`;
+            updateCarouselState();
+        }
+
+        certPrevBtn?.addEventListener('click', () => scrollCarousel('prev'));
+        certNextBtn?.addEventListener('click', () => scrollCarousel('next'));
+        
+        // Update carousel on window resize
+        window.addEventListener('resize', updateCarouselState);
+        updateCarouselState();
 
         // Add stagger effect to project cards
         const projectCards = document.querySelectorAll('.project-card');
